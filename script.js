@@ -1,23 +1,57 @@
-// Author:
+// Author:Kaiden Groves
 
 // Global UI Variables
+let canvasDiv;
+
+let canvas;
+
+let buttonDiv;
+
+let clearButton;
+
+let sliderDiv;
+
+let slider;
+
+let minSpan;
+
+let maxSpan;
 //let canvasDiv;
 
 function setup() {
   // create canvas UI
+  canvasDiv = createDiv();
 
+  canvas = createCanvas(640, 480);
+
+  background(65, 60, 88);
+  
+  canvas.mousePressed(drawEllipse);
   // create slider UI
 
   // create button UI
+  buttonDiv = createDiv();
 
+  clearButton = createButton("Clear Canvas");
+  
+  
 }
+
+clearButton.mousePressed(function() {
+
+  background(65, 60, 88);
+  
+  clearButton.parent(buttonDiv);
+});
 
 function draw() {
 
 }
 
 function drawEllipse() {
-
+  fill("blue");
+  
+  ellipse(mouseX, mouseY, 100);
 }
 
 
