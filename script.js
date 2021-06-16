@@ -27,12 +27,20 @@ function setup() {
   background(65, 60, 88);
   
   canvas.mousePressed(drawEllipse);
-  // create slider UI
 
+  canvas.parent(canvasDiv);
+  // create slider UI
+sliderDiv = createDiv();
+minSpan = createSpan("min");
+minSpan.parent(sliderDiv);
+slider = createSlider(0, 100, 50, 1);
   // create button UI
   buttonDiv = createDiv();
 
   clearButton = createButton("Clear Canvas");
+  clearbutton.mousepressed(function(){
+    background(65, 60, 88);
+  });
   
   
 }
@@ -72,5 +80,13 @@ function drawEllipse() {
 *******************************************************************************/
 
 function drawSplatter(){
-
-}
+fill(random(100,256), random(100, 256), random(100, 256));
+noStroke();
+let ellipses = random(10, 15);
+let spread = slider.value();
+for(let i = 0; i < ellipses i++){
+  let randomSize = random
+  (5, 15);
+  let randomX = random(mouseX - spread, mouseX + spread + 1);
+  let randomY = random(mouseY - spread, mouseX + spread + 1);
+  }
